@@ -1,0 +1,1 @@
+curl -s "https://archlinux.org/mirrorlist/?country=FR&country=GB&country=ES&country=IT&country=AU&protocol=https&use_mirror_status=on" | sed -e 's/^#Server/Server/' -e '/^#/d' | rankmirrors -n 6 - >/etc/pacman.d/mirrorlist

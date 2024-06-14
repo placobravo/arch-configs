@@ -1,0 +1,36 @@
+# Ignore everything
+/*
+
+# ~ whitelist
+!.gitignore
+!.zprofile
+!.zshrc
+!.p10k.zsh
+
+# ~/.config whitelist
+!/.config/
+.config/*
+!user-dirs.dirs
+!user-dirs.locale
+
+# ~/.config/* whitelist
+!/.config/foot/
+!.config/mako/
+!.config/nvim/
+!.config/yazi/
+!.config/sway/
+!.config/waybar/
+!.config/wofi/
+!.config/zathura/
+
+# ~/.local/bin/aurchtistic/* whitelist
+!/.local/
+.local/*
+!/.local/bin
+.local/bin/*
+!.local/bin/aurchtistic/
+
+# ~/Stuff/Wallpapers/* whitelist
+!/Stuff/
+Stuff/*
+!Stuff/Wallpapers/

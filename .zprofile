@@ -1,0 +1,15 @@
+export EDITOR="nvim"
+export TERMINAL="foot"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+export QT_QPA_PLATFORM="wayland;xcb"
+export QT_AUTO_SCREEN_SCALE_FACTOR=0
+export QT_SCALE_FACTOR=1
+export MOZ_ENABLE_WAYLAND=1
+export GDK_SCALE=1
+export GDK_DPI_SCALE=1
+export GTK_THEME=Adwaita:dark
+export PATH=$HOME/.local/bin/:$PATH
+export PATH=$HOME/.local/bin/aurchtistic/:$PATH
+export XDG_CURRENT_DESKTOP=sway
