@@ -29,14 +29,13 @@ localDir = os.environ['LOGSEQ_LOCAL_DIR']
 #############################################################
 
 def isSynced(sockPath:str=sockPath, dirPath:str=dirPath) -> bool:
-    # Check if nextcloud socket exists
-    if os.path.exists(sockPath):
+    try:
         # Create socket object
         nextSocket = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
 
         # Connect to socket
         nextSocket.connect(sockPath)
-    else:
+    except ConnectionRefusedError:
         return False
 
     # Send folder status command

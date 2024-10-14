@@ -12,3 +12,10 @@ export GDK_DPI_SCALE=1
 export GTK_THEME=Adwaita:dark
 export PATH=$HOME/.local/bin/:$PATH
 export XDG_CURRENT_DESKTOP=sway
+
+
+# Logseq Sync Variables
+export NEXTCLOUD_SOCKET_PATH="/run/user/1000/Nextcloud/socket"
+export NEXTCLOUD_DIR_PATH="$HOME/Nextcloud"
+export LOGSEQ_NEXTCLOUD_DIR="$HOME/Nextcloud/Documenti/logseq"
+export LOGSEQ_LOCAL_DIR="$HOME/Stuff/logseq"
