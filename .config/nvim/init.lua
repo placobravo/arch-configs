@@ -13,11 +13,11 @@ vim.opt.autochdir = true
 -- configure backup and swap
 
 -- Every wrapped line will continue visually indented (same amount of space as the beginning of that line), thus preserving horizontal blocks
-vim.opt.breakindent = true
-vim.opt.breakindentopt = "shift:4,sbr"
+vim.opt.breakindent = false
+vim.opt.breakindentopt = "shift:0,sbr"
 
 -- String to put at the start of lines that have been wrapped.
-vim.opt.showbreak = "→"
+vim.opt.showbreak = "   →"
 
 -- vim.opt.ignorecase = true
 -- vim.opt.smartcase = true
