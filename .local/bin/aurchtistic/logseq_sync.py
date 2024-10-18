@@ -35,7 +35,7 @@ def isSynced(sockPath:str=sockPath, dirPath:str=dirPath) -> bool:
 
         # Connect to socket
         nextSocket.connect(sockPath)
-    except ConnectionRefusedError:
+    except (ConnectionRefusedError, FileNotFoundError):
         return False
 
     # Send folder status command
