@@ -86,4 +86,6 @@ lspconfig.lua_ls.setup({
 	},
 })
 
-lspconfig.bashls.setup({})
+lspconfig.bashls.setup({
+	on_attach = on_attach,
+})
