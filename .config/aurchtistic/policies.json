@@ -1,0 +1,29 @@
+{
+  "policies": {
+    "Cookies": {
+      "Allow": []
+    },
+    "Bookmarks":[],
+    "DisableFirefoxAccounts": true,
+    "DisableMasterPasswordCreation": true,
+    "DisablePasswordReveal": true,
+    "DisablePocket": true,
+    "DontCheckDefaultBrowser": true,
+    "Extensions": {
+      "Install":  [
+        "https://addons.mozilla.org/firefox/downloads/file/4382536/ublock_origin-1.61.0.xpi",
+      ],
+      "Uninstall": [
+        "google@search.mozilla.org",
+        "bing@search.mozilla.org",
+        "amazondotcom@search.mozilla.org",
+        "ebay@search.mozilla.org",
+        "twitter@search.mozilla.org"
+      ],
+      "Locked": ["uBlock0@raymondhill.net"]
+    },
+    "NoDefaultBookmarks": true,
+    "OfferToSaveLogins": false,
+    "PasswordManagerEnabled": false
+  }
+}

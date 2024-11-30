@@ -1,0 +1,54 @@
+# Ignore everything
+/*
+
+# Next is the actual whitelist
+
+# ~/xxx (files)
+!.gitignore
+
+# ~/.config/xxx (files)
+!/.config/
+.config/*
+!/.config/user-dirs.dirs
+!/.config/user-dirs.locale
+
+# ~/.config/xxx/ (folders)
+!/.config/foot/
+!.config/mako/
+!.config/yazi/
+!.config/sway/
+!.config/waybar/
+!.config/wofi/
+!.config/zathura/
+!.config/fish/
+!.config/aurchtistic/
+
+# ~/.config/nvim/xxx (folders and files)
+!/.config/nvim/
+.config/nvim/*
+!/.config/nvim/init.lua
+!.config/nvim/lua
+
+# ~/.mozilla/xxx (files)
+!/.mozilla/
+.mozilla/*
+!/.mozilla/managed-storage/
+.mozilla/managed-storage/*
+!.mozilla/managed-storage/uBlock0@raymondhill.net.json
+!/.mozilla/firefox/
+.mozilla/firefox/*
+!/.mozilla/firefox/aurchtis.aurchtistic/
+.mozilla/firefox/aurchtis.aurchtistic/*
+!.mozilla/firefox/aurchtis.aurchtistic/user-overrides.js
+
+# ~/.local/bin/aurchtistic/ (folder)
+!/.local/
+.local/*
+!/.local/bin/
+.local/bin/*
+!.local/bin/aurchtistic/
+
+# ~/Stuff/Wallpapers/ (folder)
+!/Stuff/
+Stuff/*
+!Stuff/Wallpapers/

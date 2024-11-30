@@ -1,0 +1,10 @@
+{
+  "name": "uBlock0@raymondhill.net",
+  "description": "config from aurchtistic",
+  "type": "storage",
+  "data": {
+    "userSettings": [
+        [ "advancedUserEnabled", "true" ]
+    ]
+  }
+}
