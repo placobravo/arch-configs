@@ -10,8 +10,11 @@ vim.g.mapleader = ' '
 
 vim.keymap.set('n', '<leader>w', '<cmd>write<cr>', {desc = 'Save'})
 vim.keymap.set("i", "jk", "<ESC>", { noremap = true, silent = true, desc = "<ESC>" })
+
+-- 'd' and 'x' delete, while 'X' cuts
 vim.keymap.set({'n', 'x'}, 'x', '"_x')
-vim.keymap.set({'n', 'x'}, 'X', '"_d')
+vim.keymap.set({'n', 'x'}, 'd', '"_d')
+vim.keymap.set({'n', 'x'}, 'X', 'd')
 vim.keymap.set('n', '<leader>a', ':keepjumps normal! ggVG<cr>')
 
 -- Hint: see `:h vim.map.set()`
