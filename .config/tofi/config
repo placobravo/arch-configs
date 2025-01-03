@@ -1,0 +1,54 @@
+# Fonts
+	font = /usr/share/fonts/OTF/FiraMonoNerdFont-Medium.otf
+	font-size = 14
+	hint-font = true
+
+# Text theming
+	text-color = #FFFFFF
+
+	prompt-color = #e052f9
+	prompt-background = #00000000
+
+	placeholder-color = #FFFFFFA8
+	placeholder-background = #00000000
+
+	input-color = #f7f952
+
+	selection-color = #F92672
+	selection-background = #00000000
+
+# Text cursor theme
+    text-cursor-style = underscore
+
+# Text layout
+	prompt-text = "Choose:    "
+	placeholder-text = "type anything"
+	num-results = 0
+	result-spacing = 15
+
+# Window theming
+	width = 100%
+	height = 100%
+	background-color = #000C
+
+	outline-width = 0
+	border-width = 0
+
+	padding-top = 1%
+	padding-left = 1%
+
+	# Whether to clip text drawing to be within the specified padding. This
+	# is mostly important for allowing text to be inset from the border,
+	# while still allowing text backgrounds to reach right to the edge.
+	clip-to-padding = true
+
+	scale = true
+
+# Behaviour
+	text-cursor = true
+	history = true
+	multi-instance = false
+	ascii-input = true
+
+# Inclusion
+	# include = /path/to/config
