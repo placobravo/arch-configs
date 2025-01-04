@@ -14,7 +14,7 @@ vim.keymap.set("i", "jk", "<ESC>", { noremap = true, silent = true, desc = "<ESC
 -- 'x' cuts to "_ register (deletes), 'd' cuts to register "a, 
 -- 'X' cuts to register "+ (system clipboard)
 vim.keymap.set({'n', 'x'}, 'x', '"_x')
-vim.keymap.set({'n', 'x'}, 'd', '"Ad')
+vim.keymap.set({'n', 'x'}, 'd', '"ad')
 vim.keymap.set({'n', 'x'}, 'X', 'd')
 
 -- Select all
