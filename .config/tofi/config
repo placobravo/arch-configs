@@ -1,5 +1,5 @@
 # Fonts
-	font = /usr/share/fonts/OTF/FiraMonoNerdFont-Medium.otf
+	font = FiraMonoNerdFontMedium
 	font-size = 14
 	hint-font = true
 
