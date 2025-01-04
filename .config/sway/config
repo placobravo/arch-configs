@@ -1,5 +1,3 @@
-# Read `man 5 sway` for a complete reference.
-
 # set $opacity 0.85
 # for_window [app_id="foot"] opacity $opacity
 
@@ -14,6 +12,8 @@ exec_always autotiling
 exec udiskie --no-automount --no-notify --tray
 exec nm-applet
 exec $HOME/.mozilla/firefox/aurchtis.aurchtistic/prefsCleaner.sh -s; exec $HOME/.mozilla/firefox/aurchtis.aurchtistic/updater.sh -usb
+exec wl-paste --type image --watch cliphist store
+exec wl-paste --type text --watch cliphist store
 
 ### Variables
 #
@@ -105,6 +105,9 @@ input * {
     # Open ranger file manager on foot terminal
     bindsym $mod+r exec foot -F ranger
 
+    # Open cliphist with tofi for clipboard history
+    bindsym $mod+b exec cliphist list | tofi | cliphist decode | wl-copy
+
 
 #
 # Moving around:
@@ -160,12 +163,6 @@ input * {
 #
 # Layout stuff:
 #
-    # You can "split" the current object of your focus with
-    # $mod+b or $mod+v, for horizontal and vertical splits
-    # respectively.
-    bindsym $mod+b splith
-    bindsym $mod+v splitv
-
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
     bindsym $mod+w layout tabbed
