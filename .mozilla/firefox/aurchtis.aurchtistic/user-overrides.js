@@ -5,8 +5,9 @@ user_pref("network.trr.custom_uri", "https://base.dns.mullvad.net/dns-query");
 
 
 /*** [SECTION 2800]: SHUTDOWN & SANITIZING ***/
-user_pref("privacy.clearOnShutdown.history", false); // retain history
-user_pref("privacy.clearOnShutdown_v2.historyFormDataAndDownloads", false); // retain history
+user_pref("privacy.clearHistory.browsingHistoryAndDownloads", false);
+user_pref("privacy.clearOnShutdown_v2.browsingHistoryAndDownloads", false);
+user_pref("privacy.clearSiteData.browsingHistoryAndDownloads", false);
 
 
 /*** [SECTION 5000]: OPTIONAL OPSEC ***/
