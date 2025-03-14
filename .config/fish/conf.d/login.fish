@@ -23,5 +23,20 @@ if status is-login
 	# Fish Config
 	set -g fish_key_bindings fish_vi_key_bindings
 
-	exec sway
+    if test "$(tty)" = "/dev/tty1"
+        if test -z $wm 
+            set -gx wm "$(whiptail --nocancel --notags \
+                --title "Select Compositor" --radiolist " " 0 0 0 \
+                sway "Sway Window Manager" on \
+                cosmic "Cosmic Desktop" off \
+                3>&1 1>&2 2>&3 3>&1)"
+            if test $wm = "sway"
+                exec sway
+            else if test $wm = "cosmic"
+                exec start-cosmic
+            else
+                :
+            end
+        end
+    end
 end
