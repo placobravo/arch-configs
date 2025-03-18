@@ -21,17 +21,20 @@
     text-cursor-style = underscore
 
 # Text layout
-	prompt-text = "Choose:    "
+	prompt-text = "Choose: "
 	placeholder-text = "type anything"
 	num-results = 0
 	result-spacing = 15
 
 # Window theming
+    prompt-padding=0
+
 	width = 100%
 	height = 100%
-	background-color = #000C
+	background-color = #000000DD
 
-	outline-width = 0
+	outline-width = 2
+    outline-color = #000000
 	border-width = 0
 
 	padding-top = 1%

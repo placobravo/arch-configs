@@ -14,6 +14,7 @@ exec nm-applet
 exec $HOME/.mozilla/firefox/aurchtis.aurchtistic/prefsCleaner.sh -s; exec $HOME/.mozilla/firefox/aurchtis.aurchtistic/updater.sh -usb
 exec wl-paste --type image --watch cliphist store
 exec wl-paste --type text --watch cliphist store
+exec clipboard_check.sh
 
 ### Variables
 #
@@ -29,7 +30,7 @@ set $term foot
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu tofi-drun --drun-launch=true
+set $menu menu.sh
 
 ### Output configuration
 #
@@ -105,8 +106,18 @@ input * {
     # Open ranger file manager on foot terminal
     bindsym $mod+r exec foot -F ranger
 
+<<<<<<< Updated upstream
     # Open cliphist with tofi for clipboard history
     bindsym $mod+b exec cliphist list | tofi | cliphist decode | wl-copy
+=======
+    # Open 230 soia riso note
+    bindsym $mod+n exec $HOME/.local/bin/aurchtistic/notes.sh
+    # Open al volo note
+    bindsym $mod+m exec $HOME/.local/bin/aurchtistic/alvolo.sh
+
+    # Toggle eDP-1 display
+    bindsym $mod+p exec sway output eDP-1 toggle
+>>>>>>> Stashed changes
 
 
 #
