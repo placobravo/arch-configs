@@ -22,6 +22,7 @@
 !.config/zathura/
 !.config/fish/
 !.config/aurchtistic/
+!.config/swaylock/
 
 # ~/.config/nvim/xxx (folders and files)
 !/.config/nvim/

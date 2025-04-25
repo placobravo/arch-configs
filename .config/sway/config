@@ -35,7 +35,7 @@ set $menu menu.sh
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output "*" bg $HOME/Stuff/Wallpapers/darksouls3.jpg fill
+output "*" bg "$BACKGROUND" fill
 #
 # Example configuration:
 #
@@ -92,9 +92,6 @@ input * {
     # Reload the configuration file
     bindsym $mod+Shift+c reload
 
-    # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+d exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
-    
     # Volume bindings
     bindsym XF86AudioRaiseVolume exec pulsemixer --unmute --change-volume +1 --max-volume 100
     bindsym XF86AudioLowerVolume exec pulsemixer --change-volume -1

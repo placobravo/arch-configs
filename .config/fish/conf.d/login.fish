@@ -19,10 +19,15 @@ if status is-login
 	set -gx GTK_THEME Adwaita:dark
 	set -gx XDG_CURRENT_DESKTOP sway
 	set -gx MANPAGER "nvim +Man!"
+    set -gx BACKGROUND "$HOME/Stuff/Wallpapers/darksouls3.jpg"
+    set -gx LOCKSCREEN "$HOME/Stuff/Wallpapers/darksouls3_lock.jpg"
+    set -gx LOCK_ICON "$HOME/Stuff/Wallpapers/Locks/lock.png"
 
-	# Fish Config
+
+	# Fish config
 	set -g fish_key_bindings fish_vi_key_bindings
 
+    # Login manager
     if test "$(tty)" = "/dev/tty1"
         if test -z $wm 
             set -gx wm "$(whiptail --nocancel --notags \
