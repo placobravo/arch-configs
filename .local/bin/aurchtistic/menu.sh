@@ -1,17 +1,5 @@
 #!/usr/bin/env sh
 
-lock_screen () {
-
-    # Checks if lockscreen file (blurred background + lock pic) was already created
-    if [ ! -e /tmp/aurchtistic/lockscreen.jpg ] || [ ! -d "/tmp/aurchtistic" ]; then
-        mkdir /tmp/aurchtistic
-        magick "$LOCKSCREEN" "$LOCK_ICON" -gravity center -composite -quality 100 /tmp/aurchtistic/lockscreen.jpg
-    fi
-
-    swaylock -i /tmp/aurchtistic/lockscreen.jpg
-
-}
-
 powermenu () {
     pmenu=$(echo -e "Logout\nPoweroff\nReboot\nSuspend\nLock" | tofi)
 
@@ -29,7 +17,7 @@ powermenu () {
             systemctl suspend
             ;;
         "Lock")
-            lock_screen
+            swaylock -i $LOCKSCREEN
             ;;
     esac
 }
