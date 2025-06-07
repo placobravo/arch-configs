@@ -1,32 +1,32 @@
-# Functions are only used to keep the code clean
-# They all unset themselves after being run
-
-function pick_lockscreen
-    set -l cache_dir $HOME/.cache/aurchtistic/lockscreens
-    set -l LOCKSCREEN $cache_dir/(string replace -r '\.(\w+)' '_lock.$1' (basename $BACKGROUND))
-    set -l LOCK_ICON $BACKGROUNDS_DIR/lock.png
-
-    # Test if lockscreen exists
-    # i.e. if "Lockscreens/image_lock.png" exists when "image.png" is current $BACKGROUND
-    if test ! -e $LOCKSCREEN
-        mkdir -p $cache_dir 2>/dev/null
-        magick $BACKGROUND -blur 0x8 -quality 100 - | magick - $LOCK_ICON -gravity center -composite -quality 100 $LOCKSCREEN
-    end
-
-    echo $LOCKSCREEN
-    functions -e pick_lockscreen
-end
-
-function pick_background
-    set -l pics $BACKGROUNDS_DIR/*.jpg $BACKGROUNDS_DIR/*.jpeg
-
-    if count $pics >/dev/null
-        echo $pics[(random 1 (count $pics))]
-    end
-    functions -e pick_background
-end
-
 if status is-login
+    # Functions are only used to keep the code clean
+    # They all unset themselves after being run
+    
+    function pick_lockscreen
+        set -l cache_dir $HOME/.cache/aurchtistic/lockscreens
+        set -l LOCKSCREEN $cache_dir/(string replace -r '\.(\w+)' '_lock.$0' (basename $BACKGROUND))
+        set -l LOCK_ICON $BACKGROUNDS_DIR/lock.png
+    
+        # Test if lockscreen exists
+        # i.e. if "Lockscreens/image_lock.png" exists when "image.png" is current $BACKGROUND
+        if test ! -e $LOCKSCREEN
+            mkdir -p $cache_dir 1>/dev/null
+            magick $BACKGROUND -blur 0x7 -quality 100 - | magick - $LOCK_ICON -gravity center -composite -quality 100 $LOCKSCREEN
+        end
+    
+        echo $LOCKSCREEN
+        functions -e pick_lockscreen
+    end
+    
+    function pick_background
+        set -l pics $BACKGROUNDS_DIR/*.jpg $BACKGROUNDS_DIR/*.jpeg
+    
+        if count $pics >/dev/null
+            echo $pics[(random 0 (count $pics))]
+        end
+        functions -e pick_background
+    end
+
     # $PATH
     set -a PATH /home/$USER/.local/bin
     set -a PATH /home/$USER/.local/bin/aurchtistic
