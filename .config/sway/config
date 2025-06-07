@@ -45,9 +45,9 @@ output "*" bg "$BACKGROUND" fill
 
 ### Idle configuration
 exec swayidle -w \
-         timeout 450 'swaylock -f -c 000000' \
+         timeout 450 'swaylock -f -i $LOCKSCREEN' \
          timeout 400 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-         before-sleep 'swaylock -f -c 000000'
+         before-sleep 'swaylock -f -i $LOCKSCREEN'
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -216,8 +216,8 @@ bindsym $mod+Shift+f mode "resize"
 
 ### Styling
   # Gaps
-  gaps inner 0
-  gaps outer 0
+  gaps inner 15
+  gaps outer 10
   smart_gaps off
 
   # Borders
