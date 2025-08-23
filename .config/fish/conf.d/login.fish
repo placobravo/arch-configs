@@ -22,7 +22,7 @@ if status is-login
         set -l pics $BACKGROUNDS_DIR/*.jpg $BACKGROUNDS_DIR/*.jpeg
     
         if count $pics >/dev/null
-            echo $pics[(random 0 (count $pics))]
+            echo $pics[(random 1 (count $pics))]
         end
         functions -e pick_background
     end
@@ -61,13 +61,14 @@ if status is-login
                 --title "Select Compositor" --radiolist " " 0 0 0 \
                 sway "Sway Window Manager" on \
                 cosmic "Cosmic Desktop" off \
+                tty "No compositor" off \
                 3>&1 1>&2 2>&3 3>&1)"
             if test $wm = "sway"
                 exec sway
             else if test $wm = "cosmic"
                 exec start-cosmic
             else
-                :
+                clear
             end
         end
     end
