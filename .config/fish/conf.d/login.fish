@@ -50,6 +50,12 @@ if status is-login
     set -gx BACKGROUNDS_DIR "$HOME/Stuff/Wallpapers"
     set -gx BACKGROUND (pick_background) 
     set -gx LOCKSCREEN (pick_lockscreen)
+
+	# Logseq Sync Variables
+	set -gx NEXTCLOUD_SOCKET_PATH "/run/user/1000/Nextcloud/socket"
+	set -gx NEXTCLOUD_DIR_PATH "$HOME/Nextcloud"
+	set -gx LOGSEQ_NEXTCLOUD_DIR "$HOME/Nextcloud/Documenti/logseq"
+	set -gx LOGSEQ_LOCAL_DIR "$HOME/Stuff/logseq"
     
     # Fish Config
     set -g fish_key_bindings fish_vi_key_bindings
